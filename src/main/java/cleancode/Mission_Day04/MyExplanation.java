@@ -1,5 +1,5 @@
 //package cleancode.Mission_Day04;
-//
+
 //public class MyExplanation {
 //    public boolean validateOrder(Order order) {
 //        if(order.getItems().size() == 0) {

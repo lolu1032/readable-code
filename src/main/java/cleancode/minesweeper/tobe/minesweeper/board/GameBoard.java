@@ -9,7 +9,6 @@ import cleancode.minesweeper.tobe.minesweeper.board.position.RelativePosition;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.List;
-import java.util.Stack;
 
 public class GameBoard {
 
@@ -43,7 +42,6 @@ public class GameBoard {
     public void flagAt(CellPosition cellPosition) {
         Cell cell = findCell(cellPosition);
         cell.flag();
-
         checkIfGameIsOver();
     }
 
@@ -117,7 +115,7 @@ public class GameBoard {
         }
     }
 
-    private void openAndPushCellAt(Stack<CellPosition> stack) {
+    private void openAndPushCellAt(Deque<CellPosition> stack) {
         CellPosition cuurentCellPosition = stack.pop();
         if (isOpenedCell(cuurentCellPosition)) {
             return;
@@ -236,4 +234,5 @@ public class GameBoard {
                 .filter(position -> position.isColIndexLessThan(colSize))
                 .toList();
     }
+
 }
